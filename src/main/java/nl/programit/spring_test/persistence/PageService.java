@@ -23,5 +23,16 @@ public class PageService {
 	
 	public Iterable<Page> findAll() {
 		return pageRepository.findAll();
-	}	
+	}
+	
+	public void deleteById(Long id) {
+		pageRepository.delete(id);
+		return;
+	}
+	public void deleteByPage(Page page) {
+		pageRepository.delete(page);
+		return;
+	}
+
+	
 }
