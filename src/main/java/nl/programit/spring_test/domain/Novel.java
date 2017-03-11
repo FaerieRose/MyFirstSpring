@@ -45,11 +45,18 @@ public class Novel extends Book {
 	public void setPages(List<Page> pages) {
 		this.pages = pages;
 	}
+	/**
+	 * Add a new page to the field pages
+	 * @param page Page to be added
+	 */
 	public void addPage(Page page) {
 		this.pages.add(page);
 	}
-	public void removePage(Page page) {
-		this.pages.remove(page);
+	/**
+	 * Remove an existing page
+	 * @param page Page to be removed
+	 */
+	public boolean removePage(Page page) {
+		return this.pages.remove(page);
 	}
-	
 }

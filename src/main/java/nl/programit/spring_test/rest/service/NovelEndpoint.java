@@ -47,6 +47,13 @@ public class NovelEndpoint {
 		}
 	}
 
+
+	/**
+	 * Adds a page to an existing Novel
+	 * @param id the id of the Novel to which the Page is to be added
+	 * @param page the new Page to be added to the Novel
+	 * @return If there is no existing Novel with id, 204 (No Content) is returned, otherwise 202 (Accepted)
+	 */
 	@PUT
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -63,6 +70,14 @@ public class NovelEndpoint {
 		}
 	}
 	
+	/**
+	 * Remove an existing page from a Novel and page_del determines if page
+	 * must be removed as well
+	 * @param id the id of the Novel from which the Page is to be removed
+	 * @param pageId the pageId of the Page to be removed
+	 * @param pageDel determines if page must be deleted. If true, then page is deleted
+	 * @return If there is no existing Novel with id of Page with pageId, 204 (No Content) is returned, otherwise 202 (Accepted)
+	 */
 	@DELETE
 	@Path("{id}/{page_id}/{page_del}")
 	public Response deletePageFromNovel(@PathParam("id") Long id, @PathParam("page_id") Long pageId, @PathParam("page_del") boolean pageDel) {

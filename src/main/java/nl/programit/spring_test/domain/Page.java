@@ -27,6 +27,12 @@ public class Page {
 		this.nr = nr;
 	}
 	
+	/**
+	 * This method overrides the standard equals method to allow 
+	 *   two objects to be equal when the class and id are
+	 *   identical
+	 *   @param obj the object to be compared for equality to this
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj) return true;
