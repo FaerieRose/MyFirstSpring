@@ -46,5 +46,10 @@ public class Novel extends Book {
 		this.pages = pages;
 	}
 	
-	
+	public void addPageToPages(Page page) {
+		this.pages.add(page);
+	}
+	public void removePageFromPages(Page page) {
+		this.pages.remove(page);
+	}
 }
